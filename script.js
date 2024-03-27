@@ -30,3 +30,14 @@ function operate(x, operator, y){
             return 'Please use a correct operator'
     }
 }
+
+//Display button clicks on display class
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('p');
+
+buttons.forEach((button) => {
+    // and for each one we add a 'click' listener
+    button.addEventListener("click", () => {
+      display.innerText += (button.innerText);
+    });
+  });
