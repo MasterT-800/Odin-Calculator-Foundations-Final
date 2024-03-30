@@ -58,6 +58,16 @@ buttons.forEach((button) => {
                     input[i] == '/'){
                         operator = input[i];
                         for(let j= i+1; j < length; j++){
+                            if (input[j] == '+' ||
+                                input[j] == '-' ||
+                                input[j] == '*' ||
+                                input[j] == '/'){
+                                    x = operate(Number(x), operator, Number(y));
+                                    console.log(x);
+                                    operator = input[j];
+                                    j++;
+                                    y = 0;
+                                }
                             y+= input[j];
                         }
                     break;
