@@ -83,6 +83,10 @@ buttons.forEach((button) => {
             console.log(typeof(y));
             console.log(operator);
             let solution = operate(x, operator, y);
+            solution = Math.round(solution * 100) / 100;
+            if (solution == Infinity){
+                solution = 'Stop trying to divide by 0!!!';
+            }
             return display.innerText = solution;
         }
         
